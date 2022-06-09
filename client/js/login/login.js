@@ -4,6 +4,7 @@ var userid = getCookie("useruid");
 
 const loggedOutLinks = document.querySelectorAll('.logged-out');
 const loggedInLinks = document.querySelectorAll('.logged-in');
+const admin = document.querySelectorAll('.admin');
 
 var btnLogin = document.getElementById('btnLogin');
 
@@ -11,11 +12,23 @@ var btnLogin = document.getElementById('btnLogin');
 
 //Logout
 if (userid != null) {
+
+  if(userid == "GY80rtukJzbJhojQAVkd9xHkrgp2"){
+
+    admin.forEach(item => item.style.display = 'block');
+
+
+  }else{
+    admin.forEach(item => item.style.display = 'none');
+  }
   
   console.log("Você Está Conectado, UID : "+ userid);  
 
   loggedInLinks.forEach(item => item.style.display = 'none');
   loggedOutLinks.forEach(item => item.style.display = 'block');
+  
+
+  
     // APARECER APENAS AS ABAS DE ONLINE
 
 }else{
@@ -24,6 +37,8 @@ if (userid != null) {
 
   loggedInLinks.forEach(item => item.style.display = 'block');
   loggedOutLinks.forEach(item => item.style.display = 'none');
+  admin.forEach(item => item.style.display = 'none');
+
   // APARECER APENAS AS ABAS DE NÃO ONLINE
 
 }
