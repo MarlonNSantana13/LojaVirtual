@@ -5,7 +5,8 @@ const mercadopago = require("mercadopago");
 
 // REPLACE WITH YOUR ACCESS TOKEN AVAILABLE IN: https://developers.mercadopago.com/panel
 mercadopago.configure({
-	access_token: "APP_USR-1465041879349417-060211-b6f72f399f27f0b8047b222a2e82cc40-211291776",
+//	access_token: "APP_USR-1465041879349417-060211-b6f72f399f27f0b8047b222a2e82cc40-211291776",  //ORIGINAL
+access_token: "TEST-1465041879349417-060211-12e0649be060809f25028fba96e48eaa-211291776",
 });
   
 
@@ -29,9 +30,9 @@ app.post("/create_preference", (req, res) => {
 			}
 		],
 		back_urls: {
-			"success": "http://localhost:8080/feedback",
-			"failure": "http://localhost:8080/feedback",
-			"pending": "http://localhost:8080/feedback"
+			"success": "http://localhost:8080",
+			"failure": "http://localhost:8080",
+			"pending": "http://localhost:8080"
 		},
 		auto_return: "approved",
 	};

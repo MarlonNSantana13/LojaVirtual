@@ -10,7 +10,9 @@ var numero;
 
 
 // REPLACE WITH YOUR PUBLIC KEY AVAILABLE IN: https://developers.mercadopago.com/panel
-const mercadopago = new MercadoPago('APP_USR-6cfda4f6-4837-43b3-bed5-85d422e47e21', {
+//const mercadopago = new MercadoPago('APP_USR-6cfda4f6-4837-43b3-bed5-85d422e47e21', {  //orignal
+const mercadopago = new MercadoPago('TEST-6c808412-f608-4552-9653-9ca862ad41bd', {
+  
   locale: 'pt-BR' // The most common are: 'pt-BR', 'es-AR' and 'en-US'
 });
 
